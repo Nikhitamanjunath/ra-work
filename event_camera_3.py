@@ -1,3 +1,5 @@
+# Any bounding box that comes in center of frame, capture and take mean of all data points for final value for vehicle 
+
 import cv2
 import numpy as np
 import time
