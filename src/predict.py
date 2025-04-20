@@ -10,7 +10,7 @@ from sklearn.linear_model import LinearRegression
 import joblib
 import os
 
-regression_file = 'regression_input/vehicles3.csv'
+regression_file = 'regression_input/acre2-13.csv'
 
 grouped_detections = []
 
@@ -80,7 +80,7 @@ vehicles = []
 
 for detection in grouped_detections:
     if detection['truck']:
-        vehicles.append("truck")
+        continue
     if not detection['truck']:
         image = detection['image']
         try:

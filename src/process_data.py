@@ -3,7 +3,7 @@ import numpy as np
 
 # Load vehicles (actual weights)
 vehicles = []
-folder = "reg"
+folder = "data/acre14"
 with open(folder+'/vehicles.csv', 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
