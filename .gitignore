@@ -1,3 +1,5 @@
 venv
-input.mp4
+*.mp4
 *.avi
+tmp
+*.png
