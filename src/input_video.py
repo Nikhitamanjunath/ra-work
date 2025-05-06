@@ -11,12 +11,12 @@ import csv
 downsample_factor = 4  # Adjust as needed
 
 # Load the video
-video_path = "/Users/pradeeppatil/workspace/ra-work/acre.mp4"
+video_path = "C:/Users/nikhi/Documents/workspace/ra-work/acre.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Specify the starting timestamp in milliseconds
 start_time_ms = 8000
-end_time_ms = 15000
+end_time_ms = 15000000
 # start_time_ms = 9000
 # end_time_ms = 15000
 fps = cap.get(cv2.CAP_PROP_FPS)
