@@ -3,16 +3,19 @@ import numpy as np
 from ultralytics import YOLO
 
 # === Change only this ===
-VIDEO_PATH = '/Users/pradeeppatil/workspace/ra-work/v2/videos/acre2.mp4'
+VIDEO_PATH = 'C:/Users/nikhi/Documents/workspace/ra-work/acre.mp4'
 
 # Load fast YOLO model
 model = YOLO("yolov8n.pt")  # smallest model
 VEHICLE_CLASSES = {2, 3, 5, 7}  # car, motorcycle, bus, truck
 
 # Speed settings
-DOWNSCALE = 1  
+DOWNSCALE = 1 
 YOLO_IMGSZ = 256  # YOLO input image size
 SKIP_FRAMES = 5   # Process every Nth frame
+
+cv2.namedWindow('Output', cv2.WINDOW_NORMAL)
+cv2.resizeWindow('Output', 900, 480)
 
 # Open video
 cap = cv2.VideoCapture(VIDEO_PATH)
@@ -64,7 +67,7 @@ while True:
                 cv2.putText(frame, f"Right [{model.names[cls_id]}]", (x1f, y1f - 5),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-    cv2.imshow("Vehicles Moving Right", frame)
+    cv2.imshow('Output', frame)
     if cv2.waitKey(1) == 27:
         break
 
